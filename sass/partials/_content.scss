@@ -42,7 +42,13 @@
     padding-bottom: 95px;
   }
 }
-
+.body-text{
+  .wrapper{
+    @include breakpoint-desktop-small{
+      padding-left: 100px;
+    }
+  }
+}
 .body-text-menu{
   ul{
     display: flex;
@@ -60,7 +66,7 @@
     }
   }
 }
-.body-text-text{
+.body-text-container{
   @include breakpoint-desktop-small{
    display: flex;
    gap: 32px;
