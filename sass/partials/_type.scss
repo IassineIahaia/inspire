@@ -26,10 +26,19 @@ h1{
 h2{
     font-size: rem(32px);
     margin-bottom: rem(40px);
+    @include breakpoint-tablet{
+        font-size: 40px;
+        margin-bottom: rem(47px);
+    }
+    @include breakpoint-desktop-small{
+        font-size: rem(64px);
+    }
 }
 
 h3{
-    font-size: rem(26px); 
+    font-size: rem(24px); 
+    margin-bottom: rem(16px);
+    color: $color-red;
 }
 
 h4{
@@ -44,19 +53,31 @@ em {
     font-style: italic;
 }
 p{
-    >img{
-        border-radius: 20px;
-    }
+    font-family: "filson-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: $color-black;
+    margin-bottom: 50px;
+}
+.text-italic{
+    font-style: italic;
+    color: $color-red;
+    font-size: rem(20px); 
+    line-height: rem(32px) !important;
+    margin-bottom: rem(16px) !important;
 }
 
 .text-container {
     max-width: rem(957px);
+    @include breakpoint-tablet{
+        max-width: rem(588px);
+    }
     p, ul, ol,
     blockquote,
     .embed-container,
     .wp-caption {
         line-height: rem(24px);
-        margin-bottom: rem(24px);
+        margin-bottom: rem(50px);
         max-width: 100%;
         
         &:last-child {

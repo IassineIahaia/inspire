@@ -10,7 +10,7 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -50,7 +50,7 @@ body {
 
 .wrapper {
   width: calc(100% - 3rem);
-  max-width: rem(1040px);
+  max-width: rem(957px);
   margin: 0 auto;
 
   @include breakpoint-tablet {
@@ -62,8 +62,8 @@ body {
   }
 }
 .wrapper-small {
-  width: calc(100% - 3rem);
-  max-width: rem(1040px);
+  width: calc(100% - 3.4rem);
+  max-width: rem(957px);
   margin: 0 auto;
 
   @include breakpoint-tablet {
@@ -71,7 +71,7 @@ body {
   }
 
   @include breakpoint-desktop-small {
-    width: calc(100% - 8rem);
+    width: calc(100% - 14.375rem);
   }
 }
 
@@ -95,15 +95,15 @@ body {
   padding: 2rem 0;
 
   @include breakpoint-tablet {
-    padding: 3rem 0;
+    padding: 2.5rem 0;
   }
 
   @include breakpoint-desktop-small {
-    padding: 4rem 0;
+    padding: 5.7rem 0;
   }
 
   @include breakpoint-desktop-large {
-    padding: 4rem 0;
+    padding: 5.7rem 0;
   }
 }
 
