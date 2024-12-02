@@ -1,8 +1,9 @@
 h1, h2, h3, h4{
     font-family: "filson-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     line-height: 1;
-    font-weight: 400;
-    color: $color-white;
+    color: $color-black;
 }
 
 h2, h3, h4{
@@ -14,6 +15,7 @@ h1{
     margin-bottom: rem(30px);
     line-height: rem(30px);
     font-weight: bold;
+    color: $color-white;
     @include breakpoint-desktop-small {
         font-size: rem(64px);
         line-height: rem(64px);
@@ -23,12 +25,11 @@ h1{
 
 h2{
     font-size: rem(32px);
-    margin-bottom: rem(10px);
+    margin-bottom: rem(40px);
 }
 
 h3{
     font-size: rem(26px); 
-    color: $color-white;
 }
 
 h4{
@@ -98,6 +99,7 @@ p{
     }
 
     a{
+        
         &:not(.btn){
             &:hover{
                 color: $color-black;
