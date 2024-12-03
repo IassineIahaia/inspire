@@ -45,7 +45,7 @@
 .body-text{
   .wrapper{
     @include breakpoint-desktop-small{
-      padding-left: 100px;
+      padding-left: 180px;
     }
   }
 }
@@ -62,8 +62,21 @@
         font-style: normal;
         color: $color-red;
         text-decoration: none;
+        &::after{
+          content: "/";
+          margin-left: 5px;
+        }
+      }
+      &:last-child{
+          a{
+            &::after{
+              content: "";
+              margin-left: 5px;
+            }
+        }
       }
     }
+
   }
 }
 .body-text-container{
@@ -75,7 +88,7 @@
 .sidebar{
   align-self: start;
   margin-top: 50px;
-  padding: 32px 46px 40px 46px;
+  padding: 32px 46px 40px;
   background-color: #F2F2F2;
   max-width: 388px;
   @include breakpoint-desktop-small{
