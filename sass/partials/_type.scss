@@ -77,6 +77,9 @@ p{
     @include breakpoint-tablet{
         max-width: rem(588px);
     }
+    @include breakpoint-desktop-small{
+        min-width: 588px;
+    }
     p, ul, ol,
     blockquote,
     .embed-container,
