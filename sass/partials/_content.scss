@@ -1,7 +1,14 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 100dvh;
+  height: 99dvh;
+  @include breakpoint-tablet {
+    height: 0;
+    min-height: 540px;
+  }
+  @include breakpoint-desktop-small {
+    min-height: 99dvh;
+  }
   .wrapper {
     position: relative;
     z-index: 3;
@@ -32,74 +39,68 @@
 .hero-text {
   max-width: 960px;
   padding-bottom: 30px;
-  h2{
+  h2 {
     max-width: 996px;
   }
   @include breakpoint-tablet {
-    padding-bottom: 50px;
+    padding-bottom: 60px;
   }
   @include breakpoint-desktop-small {
     padding-bottom: 95px;
   }
 }
-.body-text{
-  .wrapper{
-    @include breakpoint-desktop-small{
+.body-text {
+  .wrapper {
+    @include breakpoint-desktop-small {
       padding-left: 180px;
     }
   }
 }
-.body-text-menu{
-  ul{
+.body-text-menu {
+  margin-bottom: 10px;
+  ul {
     display: flex;
     gap: 5px;
-    li{
+    li {
       list-style: none;
-      color: $color-red;
-      a{
+      color: $color-brown;
+      a {
         font-family: "filson-pro", sans-serif;
         font-weight: 400;
         font-style: normal;
-        color: $color-red;
+        color: $color-brown;
         text-decoration: none;
-        &::after{
+        &::after {
           content: "/";
           margin-left: 5px;
         }
       }
-      &:last-child{
-          a{
-            &::after{
-              content: "";
-              margin-left: 5px;
-            }
+      &:last-child {
+        a {
+          &::after {
+            content: "";
+            margin-left: 5px;
+          }
         }
       }
     }
-
   }
 }
-.body-text-container{
-  @include breakpoint-desktop-small{
-   display: flex;
-   gap: 32px;
- }
+.body-text-container {
+  @include breakpoint-desktop-small {
+    display: flex;
+    gap: 32px;
+  }
 }
-.sidebar{
+.sidebar {
   align-self: start;
-  margin-top: 50px;
-  padding: 32px 46px 40px;
-  background-color: #F2F2F2;
-  max-width: 388px;
-  @include breakpoint-desktop-small{
+  padding: 32px 45px 40px;
+  background-color: $color-grey;
+  max-width: 390px;
+  @include breakpoint-desktop-small {
     min-width: 250px;
-    margin-top: 10px;
-   
   }
-  p{
-    margin-bottom: 0px;
-  }
-  h3{
+  h3 {
     color: $color-black;
     margin-bottom: 25px;
   }

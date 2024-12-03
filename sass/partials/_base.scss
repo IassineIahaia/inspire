@@ -92,10 +92,10 @@ body {
 }
 
 .with-padding {
-  padding: 2rem 0;
+  padding: 3.75rem 0;
 
   @include breakpoint-tablet {
-    padding: 2.5rem 0;
+    padding: 3.75rem 0;
   }
 
   @include breakpoint-desktop-small {
