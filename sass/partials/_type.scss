@@ -82,6 +82,11 @@ p{
         line-height: rem(24px);
         margin-bottom: rem(50px);
         max-width: 100%;
+        &:last-child{
+            @include breakpoint-desktop-small{
+                margin-bottom: 0;
+            }
+        }
     }
 
     ul, ol {
@@ -128,7 +133,7 @@ p{
         
     }
     p{
-        margin: 0 rem(0px) rem(47px) 0;
+        margin: 0 rem(0px) rem(50px) 0;
         @include breakpoint-tablet{
             margin-bottom: 39px;
         }
