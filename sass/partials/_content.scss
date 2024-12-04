@@ -38,20 +38,36 @@
 }
 .hero-text {
   max-width: 960px;
-  padding-bottom: 30px;
+  padding-bottom: 17px;
+
   h2 {
     max-width: 996px;
   }
+
   @include breakpoint-tablet {
-    padding-bottom: 60px;
+    padding-bottom: 58px;
+    max-width: 530px;
   }
   @include breakpoint-desktop-small {
     padding-bottom: 95px;
+    max-width: 996px;
+  }
+}
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 2px;
+  a {
+    align-self: start;
+  }
+  @include breakpoint-tablet {
+    flex-direction: row;
   }
 }
 
 .body-text-menu {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   ul {
     display: flex;
     gap: 5px;
@@ -87,17 +103,17 @@
   }
 }
 .sidebar {
-    max-width: 388px;
+  max-width: 388px;
   @include breakpoint-desktop-small {
-    width: 100%;
+    min-width: 388px;
   }
 }
 
-.sidebar-contact{
-  padding: 32px 46px 40px;
+.sidebar-contact {
+  padding: 32px 46px 26px 46px;
   background-color: $color-grey;
-  h3{
+  h3 {
     color: $color-black;
-    margin-bottom: rem(25px);
+    margin-bottom: rem(28px);
   }
 }

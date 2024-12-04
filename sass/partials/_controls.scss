@@ -39,7 +39,7 @@
 .btn-arrow{
     background: transparent;
     transition: all 0.2s ease-in-out;
-    padding-left: 0;
+    padding: rem(14px) rem(41px) rem(13px) rem(0px);
     @include breakpoint-tablet{
         padding-left: rem(15px);
         margin-left: rem(15px);

@@ -11,12 +11,15 @@ h2, h3, h4{
 }
 
 h1{
-    font-size: rem(30px);
+    font-size: rem(36px);
     margin-bottom: rem(30px);
-    line-height: rem(30px);
+    margin-right: 30px;
+    line-height: rem(36px);
     font-weight: bold;
     color: $color-white;
+    
     @include breakpoint-tablet{
+        max-width: 100%;
         font-size: rem(44px);
         line-height: rem(44px);
         margin-bottom: rem(30px);
@@ -30,10 +33,11 @@ h1{
 
 h2{
     font-size: rem(32px);
-    margin-bottom: rem(40px);
+    margin-bottom: rem(37px);
+    margin-right: 30px;
     @include breakpoint-tablet{
         font-size: 40px;
-        margin-bottom: rem(45px);
+        margin-bottom: rem(44px);
     }
     @include breakpoint-desktop-small{
         font-size: rem(64px);
@@ -58,18 +62,11 @@ em {
     font-style: italic;
 }
 
-.quotes{
-    font-style: italic;
-    color: $color-brown;
-    font-size: rem(20px); 
-    line-height: rem(32px) !important;
-    margin-bottom: rem(15px) !important;
-    @include breakpoint-tablet{
-        margin-bottom: rem(18px) !important;
-    }
-}
 p{
     font-family: "filson-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: $color-black;
 }
 
 .text-container {
@@ -77,9 +74,7 @@ p{
     @include breakpoint-tablet{
         max-width: rem(588px);
     }
-    @include breakpoint-desktop-small{
-        min-width: 588px;
-    }
+
     p, ul, ol,
     blockquote,
     .embed-container,
@@ -133,11 +128,10 @@ p{
         
     }
     p{
-        font-family: "filson-pro", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        color: $color-black;
-        margin-bottom: 50px;
+        margin: 0 rem(10px) rem(47px) 0;
+        @include breakpoint-tablet{
+            margin-bottom: 39px;
+        }
     }
 
     blockquote {
@@ -145,5 +139,12 @@ p{
         font-size: 1.4em;
         line-height: 1.2;
         border-left: .1rem solid currentColor;
+    }
+    .quotes{
+        font-style: italic;
+        color: $color-brown ;
+        font-size: rem(20px); 
+        line-height: rem(32px);
+        margin-bottom: rem(5px);
     }
 }
