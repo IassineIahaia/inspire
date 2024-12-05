@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
       gutter: 30,
       mouseDrag: true,
       controls: true,
-      nav: true,
+      nav: false,
       autoHeight: true,
       autoplay: true,
       autoplayButtonOutput: false,
