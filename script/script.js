@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
       controls: true,
       nav: false,
       autoHeight: true,
-      autoplay: true,
+      autoplay: false,
       autoplayButtonOutput: false,
       autoplayTimeout: 3000,
       speed: 500,
