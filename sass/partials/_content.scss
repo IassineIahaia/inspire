@@ -130,7 +130,6 @@
     @include breakpoint-tablet {
       gap: 41px;
     }
-
   }
 }
 
@@ -148,8 +147,6 @@
   @include breakpoint-desktop-small {
     width: 150%;
   }
-
-
 }
 .image-slider-item {
   box-shadow: 0px 4px 50px #00000040;
@@ -165,7 +162,6 @@
   @include breakpoint-desktop-small {
     height: 403px;
   }
-
 }
 .image-slider-item-text {
   box-shadow: 0px 4px 50px #00000040;
@@ -193,7 +189,7 @@
   span {
     display: inline-block;
     width: 100%;
-    border: 1px solid #ECECEC;
+    border: 1px solid #ececec;
   }
 }
 
@@ -201,15 +197,16 @@
   align-self: center;
 }
 
-.image-slider-header{
+.image-slider-header {
   gap: 10px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  @include breakpoint-desktop-small{
+  @include breakpoint-desktop-small {
     flex-direction: row;
   }
   h2 {
+    margin-bottom: 25px;
     @include breakpoint-tablet {
       margin: 0;
       max-width: 450px;
