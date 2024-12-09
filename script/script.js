@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   var slider = tns({
-    container: '.my-slider',
+    container: '.tiny-slider',
       items: 1,
       gutter: 30,
       mouseDrag: true,
@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nav: false,
       autoHeight: true,
       autoplay: true,
+      controlsContainer: '.tns-controls', 
       autoplayButtonOutput: false,
       autoplayTimeout: 3000,
       speed: 500,
@@ -20,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         1024: {
           items: 3,
+        },
+        1440: {
+          items: 4,
         },
       },
   });
