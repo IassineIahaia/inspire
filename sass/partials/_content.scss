@@ -126,7 +126,7 @@
   .wrapper {
     display: flex;
     flex-direction: column;
-    gap: 31px;
+    gap: 21px;
     @include breakpoint-tablet {
       gap: 41px;
     }
@@ -139,7 +139,7 @@
   margin-left: 0;
   box-shadow: 0px 4px 50px #00000040;
   @include breakpoint-tablet {
-    width: 145%;
+    width: 140%;
   }
   @include breakpoint-desktop-small {
     width: 125%;
@@ -166,7 +166,7 @@
 .image-slider-item-text {
   box-shadow: 0px 4px 50px #00000040;
   background-color: $color-white;
-  padding: 29px 32px 23px 23px;
+  padding: 29px 24px 23px 23px;
   h3 {
     color: $color-black;
     line-height: 32px;
@@ -189,21 +189,23 @@
   span {
     display: inline-block;
     width: 100%;
-    border: 1px solid #ececec;
+    border: 1px solid rgba($color: #ECECEC, $alpha: 0.4)
   }
 }
 
 .btn-slider {
+  margin-top: 10px;
   align-self: center;
 }
 
 .image-slider-header {
   gap: 10px;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  @include breakpoint-desktop-small {
+  @include breakpoint-tablet {
     flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 36px;
   }
   h2 {
     margin-bottom: 15px;
@@ -234,11 +236,12 @@
     }
     transition: all 0.4s ease-in-out;
     background: $color-brown url(images/arrow.svg) no-repeat center center;
+    background-size: 13px 12px;
     transform: rotate(180deg);
-    background-size: 15px 25px;
     text-indent: -99999px;
     &[data-controls="next"] {
       transform: rotate(0deg);
+      
     }
   }
 }

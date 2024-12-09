@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var slider = tns({
     container: '.tiny-slider',
       items: 1,
-      gutter: 30,
+      gutter: 20,
       mouseDrag: true,
       controls: true,
       nav: false,
