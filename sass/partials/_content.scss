@@ -130,18 +130,7 @@
     @include breakpoint-tablet {
       gap: 41px;
     }
-    h2 {
-      margin: 0;
-      @include breakpoint-tablet {
-        max-width: 450px;
-        font-size: 40px;
-      }
-      @include breakpoint-desktop-small {
-        max-width: 588px;
-        font-size: 64px;
-        line-height: 64px;
-      }
-    }
+
   }
 }
 
@@ -216,6 +205,22 @@
   gap: 10px;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  @include breakpoint-desktop-small{
+    flex-direction: row;
+  }
+  h2 {
+    @include breakpoint-tablet {
+      margin: 0;
+      max-width: 450px;
+      font-size: 40px;
+    }
+    @include breakpoint-desktop-small {
+      max-width: 588px;
+      font-size: 64px;
+      line-height: 64px;
+    }
+  }
 }
 
 .tns-controls {
