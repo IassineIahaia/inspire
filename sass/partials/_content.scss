@@ -287,15 +287,15 @@
 }
 
 .text-image-image{
-  // position: relative;
+  position: relative;
   min-height: 400px;
   grid-column: 1 / -1;
   @include breakpoint-desktop-small{
     grid-column: 8 / -1;
   }
   >img{
-    // left: -10%;
-    // width: calc(100% + 20%);
+    left: -10%;
+    width: calc(100% + 20%);
     @include breakpoint-desktop-small{
       left: 0%;
       width: calc(100% + 100%);
