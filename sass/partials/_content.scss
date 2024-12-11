@@ -255,6 +255,7 @@
 
 .text-image{
   background-color: $color-brown;
+  overflow-x: hidden;
   .wrapper{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
