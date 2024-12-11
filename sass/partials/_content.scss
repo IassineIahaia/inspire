@@ -253,51 +253,62 @@
   }
 }
 
-.text-image{
+.text-image {
   background-color: $color-brown;
   overflow-x: hidden;
-  .wrapper{
+  .wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    @include breakpoint-desktop-small{
+    gap: 0px 24px;
+    @include breakpoint-desktop-small {
       grid-template-columns: repeat(12, 1fr);
     }
   }
 }
 
-.text-image-text{
-  padding: 80px 0;
+.text-image-text {
+  padding: 75px 0;
   grid-column: 1 / -1;
-  @include breakpoint-desktop-small{
+  @include breakpoint-desktop-small {
     grid-column: 1 / 7;
   }
-  h2{
+  h2 {
     color: $color-white;
-    font-size: 40px;
+    font-size: 32px;
     line-height: 40px;
+    margin-bottom: 15px;
+    @include breakpoint-tablet{
+      font-size: 40px;
+      margin-bottom: 36px;
+    }
+
   }
-  p{
+  .first-paragraph{
+    padding-bottom: 30px;
+  }
+  p {
     color: $color-white;
     font-size: 20px;
     line-height: 32px;
+    padding-bottom: 0px;
   }
-  p + p{
-    padding-bottom: 20px;
+  .btn-green{
+    margin-top: 20px;
   }
+
 }
 
-.text-image-image{
+.text-image-image {
   position: relative;
   min-height: 400px;
   grid-column: 1 / -1;
-  @include breakpoint-desktop-small{
+  @include breakpoint-desktop-small {
     grid-column: 8 / -1;
   }
-  >img{
+  > img {
     left: -10%;
     width: calc(100% + 20%);
-    @include breakpoint-desktop-small{
+    @include breakpoint-desktop-small {
       left: 0%;
       width: calc(100% + 100%);
     }
