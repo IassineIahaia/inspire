@@ -64,6 +64,20 @@
         color: #f5c0a0;
     }
 }
+.btn-green{
+    background-color: $color-white;
+    color: $color-green;
+    &::before{
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: 10px;
+        width: 14px;
+        height: 13px;
+        transform: translate(-50%, -50%);
+        background: url(/images/arrow-green.svg) no-repeat center center;
+    }
+}
 
 form{
     position: relative;
