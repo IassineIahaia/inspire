@@ -75,7 +75,7 @@ body {
     width: calc(100% - 8rem);
   }
 }
-.small {
+.wrapper-small {
   @include breakpoint-desktop-small {
    padding-left: 100px;
   }
@@ -112,5 +112,22 @@ body {
 .last-products ~ .overview {
   @include breakpoint-desktop-small {
     margin-top: 148px;
+  }
+}
+
+@keyframes btn-move{
+  from{
+    right: 100%;
+  }
+  to{
+    right: 0%;
+  }
+}
+@keyframes btn-fill{
+  from{
+    right: 100%;
+  }
+  to{
+    right: 0%;
   }
 }

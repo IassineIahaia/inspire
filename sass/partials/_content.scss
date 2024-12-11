@@ -136,7 +136,29 @@
     }
   }
 }
-
+.image-slider-header {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  @include breakpoint-tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 36px;
+  }
+  h2 {
+    margin-bottom: 15px;
+    @include breakpoint-tablet {
+      margin: 0;
+      max-width: 450px;
+      font-size: 40px;
+    }
+    @include breakpoint-desktop-small {
+      max-width: 588px;
+      font-size: 64px;
+      line-height: 64px;
+    }
+  }
+}
 .image-slider-items {
   position: relative;
   width: 100%;
@@ -151,6 +173,10 @@
     width: 150%;
   }
 }
+.image-slider-item-link {
+  cursor: pointer;
+  text-decoration: none;
+}
 
 .image-slider-item-image {
   width: 100%;
@@ -163,12 +189,16 @@
   }
 }
 .image-slider-item-text {
+  display: block;
   background-color: $color-white;
   padding: 29px 24px 23px 23px;
   h3 {
     color: $color-black;
     line-height: 32px;
     margin-bottom: 25px;
+  }
+  span {
+    color: $color-brown;
   }
 }
 .image-slider-item-text-nav {
@@ -196,30 +226,6 @@
   align-self: center;
 }
 
-.image-slider-header {
-  gap: 10px;
-  display: flex;
-  flex-direction: column;
-  @include breakpoint-tablet {
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 36px;
-  }
-  h2 {
-    margin-bottom: 15px;
-    @include breakpoint-tablet {
-      margin: 0;
-      max-width: 450px;
-      font-size: 40px;
-    }
-    @include breakpoint-desktop-small {
-      max-width: 588px;
-      font-size: 64px;
-      line-height: 64px;
-    }
-  }
-}
-
 .tns-controls {
   display: flex;
   align-items: center;
@@ -242,9 +248,6 @@
     }
   }
 }
-.image-slider-item {
-  padding: 30px;
-}
 
 .example {
   filter: drop-shadow(0px 4px 15px #00000040);
@@ -260,6 +263,9 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0px 24px;
+    @include breakpoint-tablet {
+      grid-template-columns: repeat(8, 1fr);
+    }
     @include breakpoint-desktop-small {
       grid-template-columns: repeat(12, 1fr);
     }
@@ -269,21 +275,30 @@
 .text-image-text {
   padding: 75px 0;
   grid-column: 1 / -1;
+  @include breakpoint-tablet {
+    grid-column: 1 / 8;
+    padding: 75px 0 70px;
+  }
   @include breakpoint-desktop-small {
     grid-column: 1 / 7;
+    padding: 77px 0;
   }
   h2 {
     color: $color-white;
     font-size: 32px;
     line-height: 40px;
     margin-bottom: 15px;
-    @include breakpoint-tablet{
+    @include breakpoint-tablet {
       font-size: 40px;
       margin-bottom: 36px;
     }
-
+    @include breakpoint-desktop-small {
+      font-size: 64px;
+      line-height: 64px;
+      margin-bottom: 30px;
+    }
   }
-  .first-paragraph{
+  .first-paragraph {
     padding-bottom: 30px;
   }
   p {
@@ -292,16 +307,18 @@
     line-height: 32px;
     padding-bottom: 0px;
   }
-  .btn-green{
+  .btn-green {
     margin-top: 20px;
   }
-
 }
 
 .text-image-image {
   position: relative;
   min-height: 400px;
   grid-column: 1 / -1;
+  @include breakpoint-tablet {
+    min-height: 370px;
+  }
   @include breakpoint-desktop-small {
     grid-column: 8 / -1;
   }
@@ -311,6 +328,7 @@
     @include breakpoint-desktop-small {
       left: 0%;
       width: calc(100% + 100%);
+      transform: scaleX(-1);
     }
   }
 }
