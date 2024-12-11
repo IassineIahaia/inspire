@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
       controls: true,
       nav: false,
       autoHeight: true,
-      autoplay: true,
+      autoplay: false,
       controlsContainer: '.tns-controls', 
       autoplayButtonOutput: false,
       autoplayTimeout: 3000,
