@@ -30,17 +30,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// tiny-slider-main
+
 document.addEventListener('DOMContentLoaded', () => {
-  // Inicializa o Tiny Slider
+  
   var slider = tns({
     container: '.tiny-slider-main',
+    
     items: 1,
     gutter: 0,
     mouseDrag: true,
     controls: true,
     nav: false,
+    controlsContainer: '.tns-controls-main', 
     autoHeight: true,
-    autoplay: false,
+    autoplay: true,
     autoplayButtonOutput: false,
     autoplayTimeout: 3000,
     speed: 500,
@@ -53,20 +57,19 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       1024: {
         items: 2,
-        gutter: 24,
+        gutter: 0,
       },
       1440: {
-        items: 2,        
-        gutter: 24,      
+        items: 2,
+        gutter: 0,
       },
     },
-    onInit: addCustomPagination // Chama a função para criar paginação
+    onInit: addCustomPagination 
   });
 
   function addCustomPagination(info) {
     const paginationContainer = document.querySelector('.pagination');
-    paginationContainer.innerHTML = ''; // Limpa qualquer conteúdo existente
-
+    paginationContainer.innerHTML = ''; 
     const slidesCount = info.slideCount;
     for (let i = 0; i < slidesCount; i++) {
       const button = document.createElement('button');
@@ -74,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
       button.dataset.index = i;
       button.textContent = i + 1;
 
-      // Adiciona evento de clique para cada botão de paginação
       button.addEventListener('click', () => {
         slider.goTo(i);
       });
@@ -82,19 +84,20 @@ document.addEventListener('DOMContentLoaded', () => {
       paginationContainer.appendChild(button);
     }
 
-    // Atualiza o botão ativo ao alterar o slide
-    slider.events.on('indexChanged', () => {
-      const activeIndex = slider.getInfo().index;
-      document.querySelectorAll('.pagination-button').forEach((btn, index) => {
-        if (index === activeIndex) {
-          btn.classList.add('active');
-        } else {
-          btn.classList.remove('active');
-        }
-      });
-    });
+    updatePaginationActive();
 
-    // Define o primeiro botão como ativo
-    paginationContainer.firstChild.classList.add('active');
+    slider.events.on('indexChanged', updatePaginationActive);
+  }
+  function updatePaginationActive() {
+    const activeIndex = slider.getInfo().displayIndex - 1; 0
+    const buttons = document.querySelectorAll('.pagination-button');
+
+    buttons.forEach((btn, index) => {
+      if (index === activeIndex) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
   }
 });
