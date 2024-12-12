@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         1024: {
           items: 3,
-          gutter: 24,
+          gutter: 0,
         },
         1440: {
           items: 4,
