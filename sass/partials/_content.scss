@@ -123,17 +123,16 @@
 
 .image-slider {
   overflow-x: hidden;
-  @include breakpoint-desktop-small{
-    padding: 36px 0 92px 0;
+  @include breakpoint-desktop-small {
+    padding: 36px 0 80px 0;
   }
   .wrapper {
     display: flex;
     flex-direction: column;
     gap: 21px;
     @include breakpoint-tablet {
-      gap: 0 41px;  
+      gap: 0 41px;
     }
- 
   }
 }
 .image-slider-header {
@@ -143,6 +142,9 @@
   @include breakpoint-tablet {
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 70px;
+  }
+  @include breakpoint-desktop-small{
     margin-bottom: 10px;
   }
   h2 {
@@ -222,6 +224,12 @@
 }
 .image-slider-item-text-nav {
   padding-bottom: 10px;
+  @include breakpoint-tablet{
+    padding-bottom: 0px;
+  }
+  @include breakpoint-desktop-small{
+    padding-bottom: 10px; 
+  }
 }
 .image-slider-arrow {
   display: flex;
@@ -238,8 +246,15 @@
 }
 
 .btn-slider {
-  margin-top: 10px;
+  margin: 0px 0 28px 0;
   align-self: center;
+  @include breakpoint-tablet {
+    margin: 32px 0 30px 0;
+  }
+  @include breakpoint-desktop-small {
+    margin: 5px 0 0px 0;
+  }
+
 }
 
 .tns-controls {
@@ -249,16 +264,15 @@
   button {
     cursor: pointer;
     border: none;
-    transition: all 0.4s ease-in-out;
     width: 48px;
     aspect-ratio: 1/1;
-    transition: all 0.4s ease-in-out;
-    background: $color-brown url(images/arrow.svg) no-repeat center center;
     background-size: 13px 12px;
-    transform: rotate(180deg);
     text-indent: -99999px;
+    &[data-controls="prev"] {
+      background: $color-brown url(images/arrow-left.svg) no-repeat center center;
+    }
     &[data-controls="next"] {
-      transform: rotate(0deg);
+      background: $color-brown url(images/arrow.svg) no-repeat center center;
     }
   }
 }
