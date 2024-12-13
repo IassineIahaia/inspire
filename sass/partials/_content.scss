@@ -475,7 +475,13 @@
 //  section values
 
 .values {
-  min-height: 400px;
+  padding: 60px 0;
+  @include breakpoint-tablet{
+    padding: 38px 0;
+  }
+  @include breakpoint-desktop-small{
+    padding: 64px 0;
+  }
   .wrapper{
     display: flex;
     flex-direction: column;
@@ -540,5 +546,11 @@
   }
   p{
     text-align: center;
+    @include breakpoint-tablet{
+      max-width: 160px;
+    }
+    @include breakpoint-desktop-small{
+      max-width: 100%;
+    }
   }
 }
