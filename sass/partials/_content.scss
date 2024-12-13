@@ -475,32 +475,55 @@
 //  section values
 
 .values {
-  background-color: hotpink;
   min-height: 400px;
   .wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
+    h2{
+      @include breakpoint-desktop-small{
+        margin-bottom: 85px;
+      }
+    }
   }
 }
 
 .values-items{
   background-color: yellow;
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(4, 1fr);
-
   gap: 24px;
+  @include breakpoint-desktop-small{
+    grid-template-columns: repeat(12, 1fr);
+  }
 }
 .values-item-image{
-  background-color: red;
+  background-color: $color-brown;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 178px;
+  height: 178px;
+  border-radius: 50%;
+  margin-bottom: 18px;
+  >img{
+    width: 60px;
+    height: 50px;
+    object-fit: contain;
+  }
 }
 .values-item{
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-column: 2 / 4;
+  max-width: 222px;
+  @include breakpoint-desktop-small{
+    display: flex;
+  }
   h3{
     text-align: center;
+    color: $color-black;
+    margin-bottom: 10px;
   }
   p{
     text-align: center;
