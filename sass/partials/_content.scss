@@ -489,7 +489,7 @@
     h2{
       margin: 0 0 20px 0;
       @include breakpoint-desktop-small{
-        margin-bottom: 85px;
+        margin-bottom: 34px;
       }
     }
   }
@@ -543,6 +543,9 @@
     color: $color-black;
     margin-bottom: 10px;
     font-size: 20px;
+    @include breakpoint-desktop-small{
+      font-size: 24px;
+    }
   }
   p{
     text-align: center;
