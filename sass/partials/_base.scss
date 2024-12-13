@@ -55,11 +55,11 @@ body {
   margin: 0 auto;
 
   @include breakpoint-tablet {
-    width: calc(100% - 5rem);
+    width: calc(100% - 10rem);
   }
 
   @include breakpoint-desktop-small {
-    width: calc(100% - 8rem);
+    width: calc(100% - 16rem);
   }
 }
 .wrapper-slider{

@@ -98,6 +98,17 @@
     &::before {
       background: url(/images/arrow.svg) no-repeat center center;
     }
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      right: 0%;
+      width: 100%;
+      height: 100%;
+      background-color: $color-green;
+      animation: btn-move 0.3s;
+      z-index: -1;
+    }
   }
 }
 form {

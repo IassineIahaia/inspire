@@ -37,7 +37,7 @@ h2{
     margin-right: 30px;
     @include breakpoint-tablet{
         font-size: 40px;
-        margin-bottom: rem(44px);
+        margin-bottom: rem(48px);
     }
     @include breakpoint-desktop-small{
         font-size: rem(64px);
@@ -135,7 +135,7 @@ p{
     p{
         margin: 0 rem(0px) rem(50px) 0;
         @include breakpoint-tablet{
-            margin-bottom: 39px;
+            margin-bottom: 53px;
         }
     }
 
