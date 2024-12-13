@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gutter: 0,
       },
     },
-    onInit: addCustomPagination 
+    onInit: addCustomPagination
   });
 
   function addCustomPagination(info) {
@@ -101,3 +101,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+

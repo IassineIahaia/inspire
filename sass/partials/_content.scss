@@ -198,6 +198,10 @@
   }
 }
 
+.tns-item[aria-hidden='true'] {
+  padding: 70px !important;
+}
+
 .image-slider-item-link {
   display: inline-block;
   cursor: pointer;
@@ -206,10 +210,10 @@
   box-shadow: 0px 2px 9px #00000040;
   transition: all 0.2s ease-in-out;
   @include breakpoint-desktop-small {
-    box-shadow: 0px 4px 24px #00000040;
+    box-shadow: 0px 4px 30px #00000040;
   }
   &:hover{
-    transform: scale(1.1);
+   
   }
 }
 
@@ -657,6 +661,24 @@
         transform: translate(-50%, -50%);
         background: url(/images/arrow.svg) no-repeat center center;
       }
+    }
+    .btn-green{
+        &:hover {
+          &::before {
+            background: url(/images/arrow.svg) no-repeat center center;
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            right: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(129, 9, 9);
+            animation: btn-move 0.3s;
+            z-index: -1;
+          }
+        }
     }
   }
 }
