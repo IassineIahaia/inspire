@@ -682,3 +682,143 @@
     }
   }
 }
+
+// title-text
+.title-text{
+  padding: 54px 0 63px 0;
+  @include breakpoint-tablet{
+    padding: 89px 0 104px 0;
+  }
+  @include breakpoint-desktop-small{
+    padding: 91px 0 94px 0;
+  }
+  background-color: $color-green;
+  .wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 24px;
+    @include breakpoint-tablet{
+      grid-template-columns: repeat(8, 1fr);
+    }
+    @include breakpoint-desktop-small{
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+}
+.title-text-title{
+  grid-column: 1 / -1;
+  padding: 30px;
+  @include breakpoint-tablet{
+    grid-column: 2 / 7;
+    padding: 0px;
+  }
+  @include breakpoint-desktop-small{
+    grid-column: 2 / 4;
+  }
+  h3{
+    color:$color-white;
+    @include breakpoint-tablet{
+      width: 280px;
+    }
+  }
+}
+.title-text-text{
+  padding: 0px 22px 0 30px;
+  grid-column: 1 / -1;
+  @include breakpoint-tablet{
+    grid-column: 2 / 8;
+    padding: 0;
+  }
+  @include breakpoint-desktop-small{
+    grid-column: 6 / 12;
+  }
+  p{
+    color:$color-white;
+    font-size: 20px;
+    line-height: 32px;
+    @include breakpoint-tablet{
+      max-width: 440px;
+    }
+    @include breakpoint-desktop-small{
+      max-width: 100%;
+    }
+  }
+}
+
+
+// info
+
+.info{
+  margin: 60px 0;
+  background-color: $color-green;
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    @include breakpoint-tablet{
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+}
+.info-time{
+  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+  padding: 30px 35px 30px;
+  @include breakpoint-tablet{
+    padding: 0px 25px 0px 0;
+    border-bottom: 0;
+    border-right: 1px solid rgb(255, 255, 255, 0.2);
+  }
+  h3{
+    color: $color-white;
+    margin-bottom: 11px;
+  }
+}
+.info-time-item{
+  display: flex;
+  gap: 16px;
+  align-items: start;
+  >img{
+    margin-top: 5px;
+  }
+  .info-time-text-time {
+   max-width: 136px;
+   p{
+    color: $color-white;
+   }
+  }
+}
+
+.info-location{
+ border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+ padding: 30px 35px 30px;
+ @include breakpoint-tablet{
+  padding: 0px 27px 0px 32px;
+  border-bottom: 0;
+  border-right: 1px solid rgb(255, 255, 255, 0.2);
+}
+  h3{
+    color: $color-white;
+    margin-bottom: 11px;
+  }
+}
+.info-location-item{
+  display: flex;
+  gap: 14px;
+  p{
+    color: $color-white;
+    max-width: 181px;
+
+  }
+}
+.info-link{
+  margin: 20px 10px;
+  @include breakpoint-tablet{
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  .btn{
+    background-color: $color-green;
+  }
+}
