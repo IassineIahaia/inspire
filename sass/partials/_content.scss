@@ -52,7 +52,7 @@
       padding-bottom: 58px;
     }
     @include breakpoint-desktop-small {
-      padding-bottom: 95px;
+      padding-bottom: 96px;
     }
   }
 }
@@ -489,8 +489,14 @@
   }
 }
 
-
-
+.values-items{
+  display: flex;
+  flex-direction: column;
+  @include breakpoint-tablet{
+    flex-direction: row;
+    gap: 56px;
+  }
+}
 .values-item{
   display: flex;
   flex-direction: column;
