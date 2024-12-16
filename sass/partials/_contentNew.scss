@@ -1,0 +1,54 @@
+
+.accordion {
+  padding: 0px 0 80px;
+  @include breakpoint-desktop-small {
+    padding: 0px 0 100px;
+  }
+  .accordion-items {
+
+  }
+  .accordion-header {
+    background-color: $color-white;
+    width: 100%;
+    border: none;
+    padding: 24px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h3 {
+      font-family: $font-family-title;
+      font-size: 20px;
+      color: $color-black;
+    }
+  }
+
+  .accordion-header .icon {
+    width: 20px;
+    transition: transform 0.3s ease;
+    transform: rotate(-90deg);
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .accordion-content {
+    padding: 5px 24px;
+    display: none;
+    font-size: 16px;
+   
+  }
+
+
+  .accordion-item.active .accordion-content {
+    display: block;
+  }
+
+  .accordion-item.active .icon {
+    transform: rotate(90deg);
+  }
+}
