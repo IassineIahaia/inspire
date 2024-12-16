@@ -762,6 +762,7 @@
       flex-direction: row;
       justify-content: space-between;
     }
+
   }
 }
 .info-time{
@@ -775,7 +776,7 @@
     height: 1px;
     background-color:rgb(255, 255, 255, 0.2);
   }
-  padding: 30px 35px 30px;
+  padding: 30px 35px 20px;
   @include breakpoint-tablet{
     padding: 0px 25px 0px 0;
     &::before{
