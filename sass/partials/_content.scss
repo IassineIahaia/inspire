@@ -876,3 +876,27 @@
       }
   }
 }
+
+.without-sidebar {
+
+  .body-text-container {
+    justify-content: center;
+
+    h3 {
+      color: $color-black;
+    }
+
+    .first-paragraph {
+      font-size: 20px;
+      line-height: 35px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
