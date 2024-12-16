@@ -1,14 +1,21 @@
 .accordion{
+  padding: 60px 0;
   .wrapper{
     @include breakpoint-tablet{
       display: grid;
       gap: 0 24px;
       grid-template-columns: repeat(8, 1fr);
     }
+    @include breakpoint-desktop-small{
+      grid-template-columns: repeat(12, 1fr);
+    }
     h2{
       margin-bottom: 15px;
       @include breakpoint-tablet{
         grid-column: 1 / -1;
+      }
+      @include breakpoint-desktop-small{
+        grid-column: 3 / 11;
       }
     }
   }
@@ -16,6 +23,9 @@
 .accordion-items {
   @include breakpoint-tablet{
     grid-column: 1 / -1;
+  }
+  @include breakpoint-desktop-small{
+    grid-column: 3 / 11;
   }
 }
 .accordion-item {
