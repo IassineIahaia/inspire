@@ -92,3 +92,27 @@
  
 }
 
+// activities
+
+.activities{
+  padding: 120px 0;
+}
+.activities-items{
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.activities-item{
+  display: flex;
+  min-height: 170px;
+  width: 588px;
+  background-color: $color-white;
+  box-shadow: 0px 2px 50px #00000040;
+}
+.activities-item-content{
+  flex: 2;
+  padding: 25px;
+}
+.activities-item-image{
+  flex: 1;
+}
