@@ -762,6 +762,11 @@
       flex-direction: row;
       justify-content: space-between;
     }
+    @include breakpoint-desktop-small{
+      display: grid;
+      gap: 0 24px;
+      grid-template-columns: repeat(12, 1fr);
+    }
 
   }
 }
@@ -770,6 +775,9 @@
   padding: 30px 35px 20px;
   @include breakpoint-tablet{
     padding: 0;
+  }
+  @include breakpoint-desktop-small{
+    grid-column: 2 / 4;
   }
   &::before{
     content: '';
@@ -783,6 +791,9 @@
       width: 1px;
       height: 100%;
       right: -40px;
+    }
+    @include breakpoint-desktop-small{
+      right: -83px;
     }
   }
   h3{
@@ -811,6 +822,10 @@
   @include breakpoint-tablet{
     padding: 0px 0px 0px 30px;
   }
+  @include breakpoint-desktop-small{
+    grid-column: 5 / 8;
+    padding-left: 50px;
+  }
  &::before{
   content: '';
   position: absolute;
@@ -823,6 +838,9 @@
     width: 1px;
     height: 100%;
     right: -20px;
+  }
+  @include breakpoint-desktop-small{
+    right: -83px;
   }
 }
   h3{
@@ -845,6 +863,10 @@
     margin: 0;
     display: flex;
     align-items: center;
+  }
+  @include breakpoint-desktop-small{
+    grid-column: 9 / 11;
+    justify-content: end;
   }
   .btn{
     background-color: $color-green;
