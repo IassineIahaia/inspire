@@ -1,19 +1,11 @@
 
 .accordion {
-  padding: 0px 0 80px;
-  @include breakpoint-desktop-small {
-    padding: 0px 0 100px;
-  }
-  .accordion-items {
 
-  }
+
   .accordion-header {
     background-color: $color-white;
     width: 100%;
     border: none;
-    padding: 24px;
-    text-align: left;
-    font-size: 16px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -40,6 +32,7 @@
     padding: 5px 24px;
     display: none;
     font-size: 16px;
+    border-bottom: 1px solid #000000;
    
   }
 
