@@ -28,6 +28,23 @@ document.addEventListener('DOMContentLoaded', () => {
         },
       },
   });
+
+  // activity-slider
+
+  var slider = tns({
+    container: '.activity-slider',
+      items: 1,
+      gutter: 0,
+      mouseDrag: true,
+      controls: true,
+      nav: false,
+      autoHeight: true,
+      autoplay: true,
+      controlsContainer: '.tns-controls', 
+      autoplayButtonOutput: false,
+      autoplayTimeout: 3000,
+      speed: 500,
+  });
 });
 
 // tiny-slider-main
@@ -110,3 +127,5 @@ document.querySelectorAll('.accordion-header').forEach(button => {
     accordionItem.classList.toggle('active');
   });
 });
+
+
