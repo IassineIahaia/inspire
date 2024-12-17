@@ -249,7 +249,7 @@ padding-bottom: 28px;
     display: flex;
     flex-direction: column;
     @include breakpoint-desktop-small{
-      align-items: space-between;
+      justify-content: space-between;
       flex-direction: row;
     }
   }
@@ -263,7 +263,7 @@ padding-bottom: 28px;
   display: flex;
   gap: 30px;
   flex-direction: column;
-  @include breakpoint-desktop-small{
+  @include breakpoint-tablet{
     gap: 100px;
     flex-direction: row;
   }
