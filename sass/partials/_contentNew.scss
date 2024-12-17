@@ -1,6 +1,6 @@
 // accordion
 .accordion {
-margin: 75px 0;
+padding: 40px 0;
 @include breakpoint-tablet {
 margin: 95px 0;
 }
@@ -103,7 +103,16 @@ padding-bottom: 28px;
 
 // activities
 .activities{
-  padding: 120px 0;
+  overflow-x: hidden;
+  padding:  0;
+  .wrapper{
+    margin-bottom: 25px;
+  }
+  .tns-item[aria-hidden='true'] {
+    padding-left:  100px !important; 
+    padding:  100px !important; 
+  }
+  
 }
 .activities-items{
   @include breakpoint-desktop-small{
@@ -125,6 +134,7 @@ padding-bottom: 28px;
   padding: 25px;
   h3{
     color: $color-black;
+    margin-bottom: 25px;
   }
 }
 .activities-item-image{
@@ -140,6 +150,7 @@ padding-bottom: 28px;
   gap: 14px;
 
   span{
+    line-height: 24px;
     display: flex;
     align-items: center;
   }

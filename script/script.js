@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   nav: false,
   controlsContainer: '.tns-controls-main', 
   autoHeight: true,
-  autoplay: true,
+  autoplay: false,
   autoplayButtonOutput: false,
   autoplayTimeout: 3000,
   speed: 500,

@@ -137,6 +137,9 @@
   gap: 16px;
 }
 .image-slider {
+  .tns-item[aria-hidden='true'] {
+    padding: 70px !important;
+  }
   overflow-x: hidden;
   @include breakpoint-desktop-small {
     padding: 36px 0 80px 0;
@@ -198,10 +201,8 @@
   }
 }
 
-.tns-item[aria-hidden='true'] {
-  padding-left:  100px !important; 
-  padding:  100px !important; 
-}
+
+
 
 .image-slider-item-link {
   display: inline-block;
