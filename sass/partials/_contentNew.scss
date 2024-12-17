@@ -107,14 +107,12 @@ padding-bottom: 28px;
 }
 .activities-items{
   @include breakpoint-desktop-small{
-    margin: 50px;
+    padding-right: 24px;
   }
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(1, 1fr);
-  @include breakpoint-desktop-small{
-    grid-template-columns: repeat(2, 1fr);
-  }
+
 }
 .activities-item{
   display: flex;
@@ -148,9 +146,10 @@ padding-bottom: 28px;
 }
 
 .activities-all{
-  @include breakpoint-desktop-small{
-    margin: -50px;
-  }
+  margin: -50px;
+}
+.tns-ovh{
+  padding: 50px;
 }
 
 .pagination {

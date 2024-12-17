@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
  var slider = tns({
   container: '.activity-slider',
   items: 1,
-  gutter: 0,
+  gutter: 24,
   mouseDrag: true,
   controls: true,
   nav: false,
@@ -47,6 +47,15 @@ document.addEventListener('DOMContentLoaded', () => {
   autoplayButtonOutput: false,
   autoplayTimeout: 3000,
   speed: 500,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    1024: {
+      items: 2,
+      gutter: 0,
+    },
+  },
   onInit: addCustomPagination
 });
 function addCustomPagination(info) {
