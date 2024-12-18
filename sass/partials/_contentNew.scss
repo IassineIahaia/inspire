@@ -248,14 +248,18 @@ padding-bottom: 28px;
   .wrapper{
     display: flex;
     flex-direction: column;
+    gap: 50px;
     @include breakpoint-desktop-small{
       justify-content: space-between;
       flex-direction: row;
     }
   }
   .logo{
-    h2{
-      color: #fff;
+    display: flex;
+    align-items: center;
+    a{
+      width: 300px;
+      height: 90px;
     }
   }
 }
@@ -296,11 +300,16 @@ padding-bottom: 28px;
 .footer-bottom{
   background-color: #2A2839;
   .wrapper{
-    text-align: center;
+    display: flex;
+    justify-content: center;
     P{
+      text-align: center;
       color: #fff;
       padding: 44px 0 46px 0;
       max-width: 291px;
+      @include breakpoint-tablet{
+        max-width: 100%;
+      }
      
     }
     a{
