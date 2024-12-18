@@ -137,8 +137,15 @@
   gap: 16px;
 }
 .image-slider {
+  .tns-ovh{
+    width: 100%;
+  }
+  
   .tns-item[aria-hidden='true'] {
-    padding: 70px !important;
+  
+    @include breakpoint-tablet {
+      padding: 70px !important;
+    }
   }
   overflow-x: hidden;
   @include breakpoint-desktop-small {
@@ -179,10 +186,13 @@
     }
   }
 }
+// .align-slider{
+//   margin-left: -58px;
+// }
 .image-slider-items {
   position: relative;
   width: 100%;
-  margin-left: -10px;
+  margin-left: -58px;
   @include breakpoint-tablet {
     width: 140%;
     margin-left: -30px;
@@ -200,7 +210,6 @@
     padding: 30px 0 30px 30px;
   }
 }
-
 
 
 
