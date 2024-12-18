@@ -138,7 +138,9 @@
 }
 .image-slider {
   .tns-ovh{
+    padding: 0 50px;
     width: 100%;
+    height: auto;
   }
   
   .tns-item[aria-hidden='true'] {
@@ -217,7 +219,7 @@
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
-  margin: 50px 0;
+  // margin: 50px 0;
   box-shadow: 0px 2px 9px #00000040;
   transition: all 0.2s ease-in-out;
   @include breakpoint-desktop-small {
