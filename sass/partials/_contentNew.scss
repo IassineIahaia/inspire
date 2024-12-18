@@ -4,43 +4,28 @@ padding: 40px 0;
 @include breakpoint-tablet {
   padding: 60px 0;
 }
-
 @include breakpoint-desktop-small {
   padding: 67px 0;
 }
-
 .wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  @include grid-layout(4, 24px, 0px);
   @include breakpoint-tablet {
-      grid-template-columns: repeat(8, 1fr);
+    @include grid-layout(8); 
   }
-
   @include breakpoint-desktop-small {
-      grid-template-columns: repeat(12, 1fr);
+    @include grid-layout(12); 
   }
-  gap: 24px;
-  h2 {
-      margin: 0;
-      grid-column-start: 1;
-      grid-column-end: 4;
-      margin-bottom: 16px;
-
-      @include breakpoint-tablet {
-          grid-column-start: 1;
-          grid-column-end: 8;
-          margin-bottom: 10px;
-      }
-
-      @include breakpoint-desktop-small { 
-          grid-column-start: 3;
-          grid-column-end: 6;
-          margin-bottom: 10px;
-      }
+  h2{
+    margin-bottom: 20px;
+    @include grid-column-start(1);
+    @include grid-column-span(4);
+    @include breakpoint-tablet{
+      @include grid-column-start(1);
+      @include grid-column-span(8);
+    }
   }
 }
 }
-
 .accordion-item {
 cursor: pointer;
 grid-column:1/5;
@@ -49,7 +34,8 @@ border-bottom: 1px solid $color-black;
   border: none;
 }
 @include breakpoint-tablet {
-  grid-column: 1 / 9;
+  @include grid-column-start(1);
+  @include grid-column-span(9);
 }
 @include breakpoint-desktop-small {
   grid-column: 3 / 11;
@@ -59,7 +45,7 @@ border-bottom: 1px solid $color-black;
 display: flex;
 justify-content: space-between;
 align-items: center;
-margin-bottom: 20px;
+padding: 20px 0;
 h3 {
   color: $color-black;
   font-size: 20px;
