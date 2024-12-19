@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     1024: {
       items: 2,
-      gutter: 0,
+      gutter: 80,
     },
   },
   onInit: addCustomPagination

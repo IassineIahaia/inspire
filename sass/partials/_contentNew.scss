@@ -100,15 +100,11 @@ transform: matrix(-1, 0, 0, -1, 0, 0);
   .wrapper{
     margin-bottom: 25px;
   }
-  // .tns-item[aria-hidden='true'] {
-  //   padding-left:  100px !important; 
-  //   padding:  100px !important; 
-  // }
   
 }
 .activities-items{
   @include breakpoint-desktop-small{
-    padding-right: 24px;
+    padding-right: -24px;
   }
   display: grid;
   gap: 24px;
@@ -120,6 +116,9 @@ transform: matrix(-1, 0, 0, -1, 0, 0);
   min-height: 170px;
   background-color: $color-white;
   box-shadow: 0px 2px 50px #00000040;
+  @include breakpoint-desktop-small{
+    box-shadow: 0px 2px 30px #00000040;
+  }
 }
 .activities-item-content{
   flex: 2;
@@ -140,7 +139,6 @@ transform: matrix(-1, 0, 0, -1, 0, 0);
   display: flex;
   align-items: center;
   gap: 14px;
-
   span{
     line-height: 24px;
     display: flex;
