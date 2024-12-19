@@ -1,4 +1,4 @@
-@mixin grid-layout($column-count, $column-gap: 2rem, $row-gap: null) {
+@mixin grid-layout($column-count, $column-gap: 1.5rem, $row-gap: 0rem) {
     $row-gap: if($row-gap == null, $column-gap, $row-gap);
     display: grid;
     grid-template-columns: repeat($column-count, 1fr);
@@ -10,7 +10,7 @@
     grid-column-start: $number;
 }
 
-@mixin grid-row-start($number) {
+@mixin grid-row-start($number) {    
     grid-row-start: $number;
 }
 

@@ -8,7 +8,7 @@ padding: 40px 0;
   padding: 67px 0;
 }
 .wrapper {
-  @include grid-layout(4, 24px, 0px);
+  @include grid-layout(4, 0rem 1.5rem);
   @include breakpoint-tablet {
     @include grid-layout(8); 
   }
@@ -16,42 +16,49 @@ padding: 40px 0;
     @include grid-layout(12); 
   }
   h2{
-    margin-bottom: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
     @include grid-column-start(1);
     @include grid-column-span(4);
     @include breakpoint-tablet{
+      margin-bottom: 11px;
       @include grid-column-start(1);
       @include grid-column-span(8);
+    }
+    @include breakpoint-desktop-small {
+      margin-bottom: 28px;
+      @include grid-column-start(3);
+
     }
   }
 }
 }
 .accordion-item {
-cursor: pointer;
-grid-column:1/5;
+  @include grid-column-start(1);
+  @include grid-column-span(4);
 border-bottom: 1px solid $color-black;
 &:last-child {
   border: none;
 }
 @include breakpoint-tablet {
   @include grid-column-start(1);
-  @include grid-column-span(9);
+  @include grid-column-span(8);
 }
 @include breakpoint-desktop-small {
-  grid-column: 3 / 11;
+  @include grid-column-start(3);
+  @include grid-column-span(8);
 }
 }
 .accordion-header {
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 20px 0;
+padding: 22px 0;
 h3 {
   color: $color-black;
   font-size: 20px;
   line-height: 32px;
   margin: 0;
-
 }
 img {
   width: 14px;
@@ -70,17 +77,15 @@ img {
       line-height: 32px;
 
 }
-
-
 .accordion-active .accordion-header img {
 transform: matrix(-1, 0, 0, -1, 0, 0);    
 }
 
 .accordion-content-text {
   padding-right: 24px;
-  padding-bottom: 28px;
+  padding-bottom: 47px;
 @include breakpoint-tablet {
-  padding-bottom: 15px;
+  padding-bottom: 18px;
 }
 @include breakpoint-desktop-small {
   grid-column: 3 / 11;
@@ -223,8 +228,7 @@ transform: matrix(-1, 0, 0, -1, 0, 0);
   justify-self: center;
 }
 
-
-.footer-top{
+.footer-content{
   background-color: #347E7D;
   padding: 50px 0;
   @include breakpoint-tablet{
@@ -292,8 +296,7 @@ transform: matrix(-1, 0, 0, -1, 0, 0);
   }
 }
 
-
-.footer-bottom{
+.footer-copyright{
   background-color: #2A2839;
   .wrapper{
     display: flex;
@@ -307,10 +310,9 @@ transform: matrix(-1, 0, 0, -1, 0, 0);
         max-width: 100%;
         padding: 44px 0 46px 0;
       }
-     
     }
     a{
       color: #fff;
     }
   }
-}
+}  
