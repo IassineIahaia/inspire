@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   responsive: {
     0: {
       items: 1,
+      gutter: 120,
     },
     1024: {
       items: 2,

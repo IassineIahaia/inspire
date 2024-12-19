@@ -88,7 +88,8 @@ transform: matrix(-1, 0, 0, -1, 0, 0);
   padding-bottom: 18px;
 }
 @include breakpoint-desktop-small {
-  grid-column: 3 / 11;
+  @include grid-column-start(3);
+  @include grid-column-span(11);
 }
 }
 
@@ -99,10 +100,10 @@ transform: matrix(-1, 0, 0, -1, 0, 0);
   .wrapper{
     margin-bottom: 25px;
   }
-  .tns-item[aria-hidden='true'] {
-    padding-left:  100px !important; 
-    padding:  100px !important; 
-  }
+  // .tns-item[aria-hidden='true'] {
+  //   padding-left:  100px !important; 
+  //   padding:  100px !important; 
+  // }
   
 }
 .activities-items{
@@ -146,14 +147,12 @@ transform: matrix(-1, 0, 0, -1, 0, 0);
     align-items: center;
   }
 }
-
 .activities-all{
   margin: -50px;
 }
 .tns-ovh{
   padding: 50px;
 }
-
 .pagination {
   position: relative;
   z-index: 2;
@@ -180,7 +179,6 @@ transform: matrix(-1, 0, 0, -1, 0, 0);
   background-color: #471b17;
   color: white;
 }
-
 .pagination-button.active {
   background-color: $color-brown;
   color: $color-white;
