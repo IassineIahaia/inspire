@@ -5,9 +5,9 @@
   font-size: rem(16px);
   font-weight: bold;
   display: inline-block;
-  background: $color-orange;
+  background-color: #BA5D01;
   color: $color-white;
-  padding: rem(17px) rem(41px) rem(16px) rem(20px);
+  padding: rem(17px) rem(100px) rem(16px) rem(20px);
   text-decoration: none;
   line-height: 1;
   overflow: hidden;
@@ -16,36 +16,24 @@
     position: absolute;
     content: "";
     top: 53%;
-    right: 10px;
-    width: 14px;
-    height: 13px;
+    right: 0px;
+    width: 48px;
+    height: 19px;
     transform: translate(-50%, -50%);
-    background: url(/images/arrow.svg) no-repeat center center;
+    background: url(/images/arrow-right.svg) no-repeat center center;
   }
 }
-.arrow-next {
-  position: relative;
-  width: 14px;
-  height: 13px;
-  &::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 50%;
-    width: 14px;
-    height: 13px;
-    transform: translate(-50%, -50%);
-    background: url(/images/arrow-brown.svg) no-repeat center center;
-  }
-}
+
 %focus-properties {
   color: $color-white;
 }
 .btn {
+ 
   transition: all 0.2s ease-in-out;
   @extend %control-properties;
   &:hover {
     @extend %focus-properties;
+    color: #BA5D01;
     &::after {
       position: absolute;
       content: "";
@@ -53,64 +41,14 @@
       right: 0%;
       width: 100%;
       height: 100%;
-      background-color: #c68a00;
+      background-color: #ffffff;
       animation: btn-move 0.3s;
       z-index: -1;
     }
   }
 }
-.btn-arrow {
-  background: transparent;
-  transition: all 0.2s ease-in-out;
-  padding-left: 1px;
-  @include breakpoint-tablet {
-    padding-left: rem(15px);
-    margin-left: rem(15px);
-  }
-  @extend %control-properties;
-  &:hover {
-    &::after {
-      position: absolute;
-      content: "";
-      bottom: 0;
-      right: 0%;
-      width: 100%;
-      height: 1%;
-      background-color: $color-white;
-      animation: btn-move 0.3s;
-    }
-  }
-}
-.btn-green {
-  background-color: $color-white;
-  color: $color-green;
-  &::before {
-    position: absolute;
-    content: "";
-    top: 53%;
-    right: 10px;
-    width: 14px;
-    height: 13px;
-    transform: translate(-50%, -50%);
-    background: url(/images/arrow-green.svg) no-repeat center center;
-  }
-  &:hover {
-    &::before {
-      background: url(/images/arrow.svg) no-repeat center center;
-    }
-    &::after {
-      position: absolute;
-      content: "";
-      bottom: 0;
-      right: 0%;
-      width: 100%;
-      height: 100%;
-      background-color: $color-green;
-      animation: btn-move 0.3s;
-      z-index: -1;
-    }
-  }
-}
+
+
 form {
   position: relative;
   max-width: rem(700px);

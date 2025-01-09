@@ -1,14 +1,21 @@
 $html-font-size: 16px;
 
+@font-face {
+    font-family: 'bold';
+    src: url(/fonts/TTChocolatesTrialBold.ttf);
+}
+@font-face {
+    font-family: 'light';
+    src: url(/fonts/TTChocolatesTrialLight.ttf);
+}
+
+
 // Colors
-$color-black: #1E1E1E;
+$color-black: #000;
 $color-white: #fff;
-$color-orange: #F7AC00;
-$color-brown: #CC4236;
-$color-grey: #f2f2f2;
-$color-green: #347E7D;
+$color-brown: #FBF8EE;
 
 
 // Fonts
-$font-family-title: "filson-pro", sans-serif;
-$font-family-default: "filson-pro", sans-serif;
+$font-family-title: bold, sans-serif;
+$font-family-default: light, sans-serif;
