@@ -1,0 +1,27 @@
+header{
+    position: fixed;
+    top: 25px;
+    left: 0;
+    height: 60px;
+    z-index: 100;
+    width: 100%;
+}
+
+.logo{
+    position: relative;
+    display: inline-block;
+    height: 55px;
+    width: 60px;
+    left: 65px;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: -110px;
+        left: -62px;
+        width: 279px;
+        height: 156px;
+        background-color: #fbf8ee;
+        transform: rotate(-31deg);
+    }
+}
